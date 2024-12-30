@@ -61,6 +61,11 @@ jobs:
           npm install playwright
           npx playwright install chromium
 
+
+      - name: Install oxipng
+        run: |
+          cargo install oxipng
+
       - name: Take screenshot
         run: |
           today=$(date +"%Y-%m-%d")
@@ -88,6 +93,10 @@ jobs:
               --wait-for-timeout 10000 \
               "${{ matrix.url }}" "$screenshot_path"
           fi
+
+      - name: Optimize PNG
+        run: |
+          oxipng -s -o max "$screenshot_path"
 
       - name: Push changes to GitHub
         run: |
