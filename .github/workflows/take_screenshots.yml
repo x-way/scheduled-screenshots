@@ -29,6 +29,8 @@ jobs:
             filename_prefix: blog.x-way.org_about
           - url: https://blog.x-way.org/now
             filename_prefix: blog.x-way.org_now
+          - url: https://blog.x-way.org/Webdesign/2025/05/10/Re-Yeah-I-Made-It-Lilac.html
+            filename_prefix: blog.x-way.org_lilac
 
       # Setting max-parallel ensures that these jobs will run in serial,
       # not parallel, so we don't have conflicting tasks trying to
